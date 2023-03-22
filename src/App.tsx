@@ -243,13 +243,12 @@ Wouldn't it be great if we could just design the login and register pages as if 
           hasAnimation={true}
           elements={[
             {
-              "title": "[Email customization support](https://docs.keycloakify.dev/email-customization)",
-              "description": `Customize the email sent to validates users addresses and other emails of sorts.`,
+              "title": "Account theme support",
+              "description": `Customize the pages where the user can update he's profile, change he's password, ect...`,
             },
             {
-              "title": "Easy migration",
-              "description": `It's easy to convert a regular theme into a Keycloakify theme. 
-              Keycloakify respects Keycloak established convention, it just enables you to use React instead of FreeMarker.`,
+              "title": "[Email customization support](https://docs.keycloakify.dev/email-customization)",
+              "description": `Customize the email sent to validates users addresses and other emails of sorts.`,
             },
             {
               "title": "[Easily testable](https://docs.keycloakify.dev/developpement)",
@@ -258,14 +257,14 @@ Wouldn't it be great if we could just design the login and register pages as if 
             },
             {
               "title": "[Context persistence](https://docs.keycloakify.dev/context-persistence)",
-              "description": `Easily carry the theme (dark/light) and the language from your main app over to the login pages.`,
+              "description": `You can easily carry the theme (dark/light) and the language from your main app over to the login pages.`,
             },
             {
               "title": "Recommended on the support forum",
               "description": `This tool [has been recommended](https://keycloak.discourse.group/t/keycloak-nodejs-admin-api-for-custom-login/12220/2?u=garronej) to users by a member of the Keycloak team.`,
             },
             {
-              "title": "[Light or deep customization, it's up to you](https://docs.keycloakify.dev/how-to-use)",
+              "title": "Shallow or advanced customization, it's up to you",
               "description": `You can opt to just inject some CSS of branding into the pages but you can also opt for modifying the pages 
             at the component level.`,
             },
@@ -275,12 +274,12 @@ Wouldn't it be great if we could just design the login and register pages as if 
             Just provide a Markdown file, optionally in different languages. That's it.`,
             },
             {
-              "title": "[Demo setups](https://github.com/garronej/keycloakify-advanced-starter)",
+              "title": "[Starter setups](https://github.com/codegouvfr/keycloakify-starter)",
               "description": `If you are not big on reading documentation there are working demo repo you can start hacking from.
             `,
             },
             {
-              "title": "Actively maintained",
+              "title": "Strong and active community of contributor",
               "description": `This tool [will stay up to date with Keycloak](https://docs.keycloakify.dev/#supported-keycloak-version) for the forseeable future and you 
               are welcome to [open issues](https://github.com/InseeFrLab/keycloakify/issues/new) if you are experiencing any issues.
             `,
