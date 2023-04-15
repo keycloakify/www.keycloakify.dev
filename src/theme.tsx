@@ -14,7 +14,7 @@ import { francePalette } from "onyxia-ui";
 export const { ThemeProvider, useTheme } = createThemeProvider({
     "getTypographyDesc": params => ({
         ...defaultGetTypographyDesc(params),
-        "fontFamily": 'Marianne, sans-serif',
+        "fontFamily": '"Work Sans", sans-serif'
     }),
     "palette": francePalette
 });
