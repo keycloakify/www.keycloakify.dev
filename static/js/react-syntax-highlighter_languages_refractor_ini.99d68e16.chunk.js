@@ -1,0 +1,2 @@
+(this.webpackJsonpkeycloakify_landingpage=this.webpackJsonpkeycloakify_landingpage||[]).push([[60],{970:function(t,n,a){"use strict";function i(t){t.languages.ini={comment:/^[ \t]*[;#].*$/m,selector:/^[ \t]*\[.*?\]/m,constant:/^[ \t]*[^\s=]+?(?=[ \t]*=)/m,"attr-value":{pattern:/=.*/,inside:{punctuation:/^[=]/}}}}t.exports=i,i.displayName="ini",i.aliases=[]}}]);
+//# sourceMappingURL=react-syntax-highlighter_languages_refractor_ini.99d68e16.chunk.js.map
