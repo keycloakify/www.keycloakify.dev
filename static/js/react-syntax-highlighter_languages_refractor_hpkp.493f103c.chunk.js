@@ -1,2 +1,0 @@
-(this.webpackJsonpkeycloakify_landingpage=this.webpackJsonpkeycloakify_landingpage||[]).push([[54],{964:function(a,e,i){"use strict";function s(a){a.languages.hpkp={directive:{pattern:/\b(?:(?:includeSubDomains|preload|strict)(?: |;)|pin-sha256="[a-zA-Z\d+=/]+"|(?:max-age|report-uri)=|report-to )/,alias:"keyword"},safe:{pattern:/\d{7,}/,alias:"selector"},unsafe:{pattern:/\d{1,6}/,alias:"function"}}}a.exports=s,s.displayName="hpkp",s.aliases=[]}}]);
-//# sourceMappingURL=react-syntax-highlighter_languages_refractor_hpkp.493f103c.chunk.js.map
