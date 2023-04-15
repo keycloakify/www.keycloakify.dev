@@ -276,13 +276,18 @@ Wouldn't it be great if we could just design the login and register pages as if 
               },
             ]}
           />
-          <GlCards title="Our exclusive sponsor" >
+          <GlCards title="Our exclusive sponsor" classes={{
+            "cardsWrapper": classes.sponsorCardsWrapper
+          }}>
             <GlLogoCard
+              className={classes.sponsorCard}
               title="Cloud IAM"
               paragraph={<>
                 Perfectly configured, optimized and customized Keycloak IAM, ready in seconds. <br/>
-                Keycloak without the pain.<br/>  
-                <i>Use the promo code <code>keycloakify</code> to get 5% off your annual subscription and support Keycloakify.</i>
+                Keycloak without the pain.
+                <br/>  
+                <br/>  
+                <i>Use the promo code <code>keycloakify</code> to get 5% off your annual subscription and support us.</i>
               </>}
               iconUrls={[cloudIamSvgUrl]}
               buttonLabel="Check them out"
@@ -384,5 +389,12 @@ const useStyles = makeStyles({ "name": { App } })(theme => ({
   },
   "subtitle": {
     "color": theme.colors.useCases.typography.textPrimary
+  },
+  "sponsorCardsWrapper": {
+    "display": "flex",
+    "justifyContent": "center"
+  },
+  "sponsorCard": {
+    ...theme.spacing.rightLeft("padding", 5),
   }
 }));
