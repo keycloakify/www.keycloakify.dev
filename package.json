@@ -4,19 +4,19 @@
   "version": "0.0.12",
   "private": true,
   "dependencies": {
-    "@emotion/react": "^11.9.0",
-    "@emotion/styled": "^11.8.1",
-    "@mui/material": "^5.8.2",
-    "@mui/icons-material": "^5.8.2",
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
+    "@mui/material": "^5.12.0",
+    "@mui/icons-material": "^5.11.16",
     "evt": "2.4.18",
-    "gitlanding": "0.16.0",
-    "onyxia-ui": "^0.41.2",
-    "powerhooks": "^0.22.0",
+    "gitlanding": "^0.24.0",
+    "onyxia-ui": "^0.51.0",
+    "powerhooks": "^0.26.7",
     "tsafe": "^1.6.0",
-    "tss-react": "^3.7.1",
+    "tss-react": "^4.8.2",
     "react": "18.1.0",
     "react-dom": "18.1.0",
-    "i18nifty": "^1.0.2"
+    "i18nifty": "^1.4.0"
   },
   "devDependencies": {
     "@types/node": "^15.3.1",
