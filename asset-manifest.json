@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/static/js/main.5cd4dc90.chunk.js",
-    "main.js.map": "/static/js/main.5cd4dc90.chunk.js.map",
+    "main.js": "/static/js/main.5183555a.chunk.js",
+    "main.js.map": "/static/js/main.5183555a.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.0ee431a0.js",
     "runtime-main.js.map": "/static/js/runtime-main.0ee431a0.js.map",
     "static/js/2.6e33ce6f.chunk.js": "/static/js/2.6e33ce6f.chunk.js",
@@ -10,7 +10,6 @@
     "static/js/2.6e33ce6f.chunk.js.LICENSE.txt": "/static/js/2.6e33ce6f.chunk.js.LICENSE.txt",
     "static/media/Keycloakify_demo.5b07ad68.mp4": "/static/media/Keycloakify_demo.5b07ad68.mp4",
     "static/media/Keycloakify_demo_full-vp9-chrome.e098d057.webm": "/static/media/Keycloakify_demo_full-vp9-chrome.e098d057.webm",
-    "static/media/cloud-iam.a91773ee.svg": "/static/media/cloud-iam.a91773ee.svg",
     "static/media/keycloakify-logo-hero-moving.24694c9b.png": "/static/media/keycloakify-logo-hero-moving.24694c9b.png",
     "static/media/keycloakify-logo.1eb8361a.png": "/static/media/keycloakify-logo.1eb8361a.png",
     "static/media/keycloakify_frontend_validation-vp9-chrome.af3a6e8e.webm": "/static/media/keycloakify_frontend_validation-vp9-chrome.af3a6e8e.webm",
@@ -21,6 +20,6 @@
   "entrypoints": [
     "static/js/runtime-main.0ee431a0.js",
     "static/js/2.6e33ce6f.chunk.js",
-    "static/js/main.5cd4dc90.chunk.js"
+    "static/js/main.5183555a.chunk.js"
   ]
 }
