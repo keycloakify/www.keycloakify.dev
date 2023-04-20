@@ -291,7 +291,7 @@ Wouldn't it be great if we could just design the login and register pages as if 
                 Keycloak without the pain.
                 <br/>  
                 <br/>  
-                <i>Use the promo code <code>keycloakify</code> to get 5% off your annual subscription and support us.</i>
+                <i>Use the promo code <code>keycloakify5</code> to get 5% off your annual subscription and support us.</i>
               </>}
               iconUrls={[cloudIamSvgUrl]}
               buttonLabel="Check them out"
