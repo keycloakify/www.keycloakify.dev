@@ -290,8 +290,7 @@ Wouldn't it be great if we could just design the login and register pages as if 
               }}
               title="Cloud IAM"
               paragraph={<>
-                Perfectly configured, optimized and customized Keycloak IAM, ready in seconds. <br/>
-                Keycloak without the pain.
+                Simplify and secure your Keycloak Identity and Access Management. Keycloak as a Service.
                 <br/>  
                 <br/>  
                 <i>Use the promo code <code>keycloakify5</code> to get 5% off your annual subscription and support us.</i>
