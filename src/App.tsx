@@ -24,7 +24,7 @@ import { GlFooter } from "gitlanding/GlFooter";
 import { declareComponentKeys } from "i18nifty";
 import { GlCards } from "gitlanding/GlCards"
 import { GlLogoCard } from "gitlanding/GlCards/GlLogoCard";
-import cloudIamSvgUrl from "assets/img/cloud-iam.svg";
+import cloudIamPngUrl from "assets/img/cloud-iam.png";
 
 const githubRepoUrl = "https://github.com/InseeFrLab/keycloakify";
 const documentationUrl = "https://docs.keycloakify.dev";
@@ -41,7 +41,7 @@ export function App() {
     }, []);
   }
 
-  const { classes } = useStyles();
+  const { classes, css } = useStyles();
 
   const { t } = useTranslation({ App });
 
@@ -285,6 +285,9 @@ Wouldn't it be great if we could just design the login and register pages as if 
           }}>
             <GlLogoCard
               className={classes.sponsorCard}
+              classes={{
+                "iconWrapper": css({ "& > img": { "width": 100 }})
+              }}
               title="Cloud IAM"
               paragraph={<>
                 Perfectly configured, optimized and customized Keycloak IAM, ready in seconds. <br/>
@@ -293,10 +296,10 @@ Wouldn't it be great if we could just design the login and register pages as if 
                 <br/>  
                 <i>Use the promo code <code>keycloakify5</code> to get 5% off your annual subscription and support us.</i>
               </>}
-              iconUrls={[cloudIamSvgUrl]}
+              iconUrls={[cloudIamPngUrl]}
               buttonLabel="Check them out"
               link={{
-                "href": "https://www.cloud-iam.com/"
+                "href": "https://cloud-iam.com/?mtm_campaign=keycloakify-deal&mtm_source=keycloakify-web-site"
               }}
             />
           </GlCards>
