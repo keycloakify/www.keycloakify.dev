@@ -78,6 +78,10 @@ export function App() {
             {
               "label": t("documentation"),
               "href": documentationUrl,
+            },
+            {
+              "label": "Storybook",
+              "href": "https://storybook.keycloakify.dev"
             }
           ]}
           enableDarkModeSwitch={true}
