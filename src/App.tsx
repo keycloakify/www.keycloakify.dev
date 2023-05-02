@@ -170,8 +170,8 @@ Wouldn't it be great if we could just design the login and register pages as if 
             title="Batteries included"
             body={`Keycloakify bundles your theme into a single \`.jar\` that you'll be able to import
           into your keycloak server.  
-
-          Whether or not React is your preferred framework, Keycloakify offers a solid option for building Keycloak themes. 
+            
+Whether or not React is your preferred framework, Keycloakify offers a solid option for building Keycloak themes. 
           It's not just a convenient way to create a Keycloak theme when using React; it's a well-regarded solution 
           that many developers appreciate.`}
             buttonLabel={`Get started`}
