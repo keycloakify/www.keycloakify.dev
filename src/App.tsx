@@ -25,6 +25,7 @@ import { declareComponentKeys } from "i18nifty";
 import { GlCards } from "gitlanding/GlCards"
 import { GlLogoCard } from "gitlanding/GlCards/GlLogoCard";
 import cloudIamPngUrl from "assets/img/cloud-iam.png";
+import { GlYoutubeVideoSection } from "gitlanding/GlYoutubeVideoSection";
 
 const githubRepoUrl = "https://github.com/InseeFrLab/keycloakify";
 const documentationUrl = "https://docs.keycloakify.dev";
@@ -236,6 +237,7 @@ Whether or not React is your preferred framework, Keycloakify offers a solid opt
 
           <GlSectionDivider />
 
+
           <GlCheckList
             heading="Everything you expect and more"
             hasAnimation={true}
@@ -284,19 +286,26 @@ Whether or not React is your preferred framework, Keycloakify offers a solid opt
               },
             ]}
           />
+
+          <GlYoutubeVideoSection
+            title={"Introduction video"}
+            src="https://www.youtube.com/embed/x3ux2JM1Bxk"
+            hasAnimation={true}
+          />
+
           <GlCards title="Our exclusive sponsor" classes={{
             "cardsWrapper": classes.sponsorCardsWrapper
           }}>
             <GlLogoCard
               className={classes.sponsorCard}
               classes={{
-                "iconWrapper": css({ "& > img": { "width": 100 }})
+                "iconWrapper": css({ "& > img": { "width": 100 } })
               }}
               title="Cloud IAM"
               paragraph={<>
                 Simplify and secure your Keycloak Identity and Access Management. Keycloak as a Service.
-                <br/>  
-                <br/>  
+                <br />
+                <br />
                 <i>Use the promo code <code>keycloakify5</code> to get 5% off your annual subscription and support us.</i>
               </>}
               iconUrls={[cloudIamPngUrl]}
