@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/static/js/main.96e61f14.chunk.js",
-    "main.js.map": "/static/js/main.96e61f14.chunk.js.map",
+    "main.js": "/static/js/main.ec2369a8.chunk.js",
+    "main.js.map": "/static/js/main.ec2369a8.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.0ee431a0.js",
     "runtime-main.js.map": "/static/js/runtime-main.0ee431a0.js.map",
-    "static/js/2.6e33ce6f.chunk.js": "/static/js/2.6e33ce6f.chunk.js",
-    "static/js/2.6e33ce6f.chunk.js.map": "/static/js/2.6e33ce6f.chunk.js.map",
+    "static/js/2.71cdac4c.chunk.js": "/static/js/2.71cdac4c.chunk.js",
+    "static/js/2.71cdac4c.chunk.js.map": "/static/js/2.71cdac4c.chunk.js.map",
     "index.html": "/index.html",
-    "static/js/2.6e33ce6f.chunk.js.LICENSE.txt": "/static/js/2.6e33ce6f.chunk.js.LICENSE.txt",
+    "static/js/2.71cdac4c.chunk.js.LICENSE.txt": "/static/js/2.71cdac4c.chunk.js.LICENSE.txt",
     "static/media/Keycloakify_demo.5b07ad68.mp4": "/static/media/Keycloakify_demo.5b07ad68.mp4",
     "static/media/Keycloakify_demo_full-vp9-chrome.e098d057.webm": "/static/media/Keycloakify_demo_full-vp9-chrome.e098d057.webm",
     "static/media/keycloakify-logo-hero-moving.24694c9b.png": "/static/media/keycloakify-logo-hero-moving.24694c9b.png",
@@ -19,7 +19,7 @@
   },
   "entrypoints": [
     "static/js/runtime-main.0ee431a0.js",
-    "static/js/2.6e33ce6f.chunk.js",
-    "static/js/main.96e61f14.chunk.js"
+    "static/js/2.71cdac4c.chunk.js",
+    "static/js/main.ec2369a8.chunk.js"
   ]
 }
