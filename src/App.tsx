@@ -139,7 +139,7 @@ Beyond that, if you use Keycloak for a specific app you want your login page to 
 Ideally, you don't want the user to notice when he is being redirected away.
 
 Trying to reproduce the look and feel of a specific app in another stack is not an easy task not to mention
-the cheer amount of maintenance that it involves.  
+the sheer amount of maintenance that it involves.  
 
 Wouldn't it be great if we could just design the login and register pages as if they were part of our app?  
 
