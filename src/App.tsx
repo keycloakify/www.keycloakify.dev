@@ -247,8 +247,8 @@ Whether or not React is your preferred framework, Keycloakify offers a solid opt
                 "description": `Customize the pages where the user can update he's profile, change he's password, ect...`,
               },
               {
-                "title": "[Email customization support](https://docs.keycloakify.dev/email-customization)",
-                "description": `Customize the email sent to validates users addresses and other emails of sorts.`,
+                "title": "Vite and CRA (Webpack) support",
+                "description": `Keycloakify can be integrated both in Vite and Webpack projects.`,
               },
               {
                 "title": "[Easily testable](https://docs.keycloakify.dev/developpement)",
