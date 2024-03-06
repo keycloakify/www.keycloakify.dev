@@ -301,7 +301,7 @@ Whether or not React is your preferred framework, Keycloakify offers a solid opt
               classes={{
                 "iconWrapper": css({ "& > img": { "width": 100 } })
               }}
-              title="Cloud IAM"
+              title="Cloud-IAM"
               paragraph={<>
                 Simplify and secure your Keycloak Identity and Access Management. Keycloak as a Service.
                 <br />
