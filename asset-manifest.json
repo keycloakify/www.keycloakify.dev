@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/static/js/main.2d0b71fc.chunk.js",
-    "main.js.map": "/static/js/main.2d0b71fc.chunk.js.map",
+    "main.js": "/static/js/main.0822feb7.chunk.js",
+    "main.js.map": "/static/js/main.0822feb7.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.0ee431a0.js",
     "runtime-main.js.map": "/static/js/runtime-main.0ee431a0.js.map",
-    "static/js/2.71cdac4c.chunk.js": "/static/js/2.71cdac4c.chunk.js",
-    "static/js/2.71cdac4c.chunk.js.map": "/static/js/2.71cdac4c.chunk.js.map",
+    "static/js/2.a8063802.chunk.js": "/static/js/2.a8063802.chunk.js",
+    "static/js/2.a8063802.chunk.js.map": "/static/js/2.a8063802.chunk.js.map",
     "index.html": "/index.html",
-    "static/js/2.71cdac4c.chunk.js.LICENSE.txt": "/static/js/2.71cdac4c.chunk.js.LICENSE.txt",
+    "static/js/2.a8063802.chunk.js.LICENSE.txt": "/static/js/2.a8063802.chunk.js.LICENSE.txt",
     "static/media/Keycloakify_demo.5b07ad68.mp4": "/static/media/Keycloakify_demo.5b07ad68.mp4",
     "static/media/Keycloakify_demo_full-vp9-chrome.e098d057.webm": "/static/media/Keycloakify_demo_full-vp9-chrome.e098d057.webm",
     "static/media/keycloakify-logo-hero-moving.24694c9b.png": "/static/media/keycloakify-logo-hero-moving.24694c9b.png",
@@ -15,11 +15,13 @@
     "static/media/keycloakify_frontend_validation-vp9-chrome.af3a6e8e.webm": "/static/media/keycloakify_frontend_validation-vp9-chrome.af3a6e8e.webm",
     "static/media/keycloakify_frontend_validation.dcf6327c.mp4": "/static/media/keycloakify_frontend_validation.dcf6327c.mp4",
     "static/media/theme_select-vp9-chrome.1244c825.webm": "/static/media/theme_select-vp9-chrome.1244c825.webm",
-    "static/media/theme_select.f6dab481.mp4": "/static/media/theme_select.f6dab481.mp4"
+    "static/media/theme_select.f6dab481.mp4": "/static/media/theme_select.f6dab481.mp4",
+    "static/media/zone2_for_dark_mode.d5634e9b.png": "/static/media/zone2_for_dark_mode.d5634e9b.png",
+    "static/media/zone2_for_light_mode.3fe5f516.png": "/static/media/zone2_for_light_mode.3fe5f516.png"
   },
   "entrypoints": [
     "static/js/runtime-main.0ee431a0.js",
-    "static/js/2.71cdac4c.chunk.js",
-    "static/js/main.2d0b71fc.chunk.js"
+    "static/js/2.a8063802.chunk.js",
+    "static/js/main.0822feb7.chunk.js"
   ]
 }
