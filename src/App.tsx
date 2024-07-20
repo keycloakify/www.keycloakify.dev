@@ -25,7 +25,11 @@ import { declareComponentKeys } from "i18nifty";
 import { GlCards } from "gitlanding/GlCards"
 import { GlLogoCard } from "gitlanding/GlCards/GlLogoCard";
 import cloudIamPngUrl from "assets/img/cloud-iam.png";
-import { GlYoutubeVideoSection } from "gitlanding/GlYoutubeVideoSection";
+import zone2ForDarkModePngUrl from "assets/img/zone2_for_dark_mode.png";
+import zone2ForLightModePngUrl from "assets/img/zone2_for_light_mode.png";
+import { breakpointsValues } from "gitlanding";
+
+//import { GlYoutubeVideoSection } from "gitlanding/GlYoutubeVideoSection";
 
 const githubRepoUrl = "https://github.com/InseeFrLab/keycloakify";
 const documentationUrl = "https://docs.keycloakify.dev";
@@ -42,7 +46,7 @@ export function App() {
     }, []);
   }
 
-  const { classes, css } = useStyles();
+  const { classes, css, theme } = useStyles();
 
   const { t } = useTranslation({ App });
 
@@ -170,11 +174,9 @@ Wouldn't it be great if we could just design the login and register pages as if 
           <GlArticle
             title="Batteries included"
             body={`Keycloakify bundles your theme into a single \`.jar\` that you'll be able to import
-          into your keycloak server.  
-            
-Whether or not React is your preferred framework, Keycloakify offers a solid option for building Keycloak themes. 
-          It's not just a convenient way to create a Keycloak theme when using React; it's a well-regarded solution 
-          that many developers appreciate.`}
+                  into your keycloak server.  
+                  The Keycloak themes generated with Keycloakify are compatible with all Keycloak versions down to Keycloak version 11, by 
+                  opposition to regular themes that must be updated to target a specific Keycloak version.`}
             buttonLabel={`Get started`}
             buttonLink={{ "href": documentationUrl }}
             illustration={
@@ -243,70 +245,88 @@ Whether or not React is your preferred framework, Keycloakify offers a solid opt
             hasAnimation={true}
             elements={[
               {
-                "title": "Account theme support",
-                "description": `Customize the pages where the user can update he's profile, change he's password, ect...`,
+                "title": "Vite, Webpack and mono-repo support",
+                "description": `Keycloakify can be integrated [directly within a Vite or Webpack project](https://docs.keycloakify.dev/keycloakify-in-my-codebase/in-your-react-project) 
+                                or [as a submodule of your monorepo](https://docs.keycloakify.dev/keycloakify-in-my-codebase/as-a-subproject-of-your-monorepo).`,
               },
               {
-                "title": "Vite and CRA (Webpack) support",
-                "description": `Keycloakify can be integrated both in Vite and Webpack projects.`,
+                "title": "[Easily testable](https://docs.keycloakify.dev/testing-your-theme)",
+                "description": `Test your theme in storybook or in a local Keycloak container with a simple command.`,
               },
               {
-                "title": "[Easily testable](https://docs.keycloakify.dev/developpement)",
-                "description": `Test your login page with a mock context without having to deploy to a real Keycloak instance.
-            When you are ready spin up a Keycloak container with a simple command and check that everything is working.`,
+                "title": "Tailwind, MUI, shadcn/ui... you name it",
+                "description": `Keycloakify let you use any component library or styling solution you want. [Including Tailwind](https://docs.keycloakify.dev/customization-strategies/css-level-customization/using-tailwind).`,
               },
               {
-                "title": "[Context persistence](https://docs.keycloakify.dev/context-persistence)",
-                "description": `You can easily carry the theme (dark/light) and the language from your main app over to the login pages.`,
-              },
-              {
-                "title": "Recommended on the support forum",
-                "description": `This tool [has been recommended](https://keycloak.discourse.group/t/keycloak-nodejs-admin-api-for-custom-login/12220/2?u=garronej) to users by a member of the Keycloak team.`,
+                "title": "We are here to help!",
+                "description": `We are happy to provide support on our [Discord server](https://discord.gg/mJdYJSdcm4) that has many active users and some members of core Keycloak team.`,
               },
               {
                 "title": "Shallow or advanced customization, it's up to you",
-                "description": `You can opt to just inject some CSS of branding into the pages but you can also opt for modifying the pages 
-            at the component level.`,
+                "description": `You can customize the theme either [at the CSS level](https://docs.keycloakify.dev/customization-strategies/css-level-customization) or
+                              [at the component level](https://docs.keycloakify.dev/customization-strategies/component-level-customization) for more advanced customization.`,
               },
               {
-                "title": "[Terms and conditions](https://docs.keycloakify.dev/terms-and-conditions)",
-                "description": `Need your users to accept your terms and conditions when registering?
-            Just provide a Markdown file, optionally in different languages. That's it.`,
-              },
-              {
-                "title": "[Starter setups](https://github.com/codegouvfr/keycloakify-starter)",
-                "description": `If you are not big on reading documentation there are working demo repo you can start hacking from.
-            `,
-              },
-              {
-                "title": "Strong and active community of contributor",
-                "description": `This tool [will stay up to date with Keycloak](https://docs.keycloakify.dev/#supported-keycloak-version) for the forseeable future and you 
-              are welcome to [open issues](https://github.com/InseeFrLab/keycloakify/issues/new) if you are experiencing any issues.
-            `,
+                "title": "Feature parity",
+                "description": `Everything that works in the default Keycloak theme also works in Keycloakify themes.`,
               },
             ]}
           />
 
+          {/*
           <GlYoutubeVideoSection
             title={"Introduction video"}
             src="https://www.youtube.com/embed/x3ux2JM1Bxk"
             hasAnimation={true}
           />
+          */}
 
-          <GlCards title="Our exclusive sponsor" classes={{
-            "cardsWrapper": classes.sponsorCardsWrapper
-          }}>
+          <GlCards
+            title={
+              <div className={css({ "textAlign": "center" })}>
+                <Text typo="page heading" className={css({ "lineHeight": "2rem", "fontSize": "2rem", "marginBottom": theme.spacing(2) })}> Sponsors </Text>
+                <Text typo="subtitle">Backers of the project, we trust and recommend their services</Text>
+              </div>
+            }
+            classes={{
+              "root": classes.cards,
+              "cardsWrapper": classes.sponsorCardsWrapper
+            }}
+          >
             <GlLogoCard
               className={classes.sponsorCard}
               classes={{
-                "iconWrapper": css({ "& > img": { "width": 100 } })
+                "iconWrapper": css({
+                  "& > img": {
+                    "width": 300,
+                    "paddingTop": theme.spacing(4)
+                  }
+                })
+              }}
+              title="Keycloak Consulting Services"
+              paragraph={<>
+                Your partner in Keycloak deployment, configuration, and extension development for optimized identity management solutions.
+              </>}
+              iconUrls={[theme.isDarkModeEnabled ? zone2ForDarkModePngUrl : zone2ForLightModePngUrl]}
+              buttonLabel="Check them out"
+              link={{
+                "href": "https://www.zone2.tech/services/keycloak-consulting"
+              }}
+            />
+
+            <GlLogoCard
+              className={classes.sponsorCard}
+              classes={{
+                "iconWrapper": css({ "& > img": { "width": 145 } })
               }}
               title="Cloud-IAM"
               paragraph={<>
-                Simplify and secure your Keycloak Identity and Access Management. Keycloak as a Service.
+                Managed Keycloak Provider:
+                Simplify and secure your Keycloak Identity and Access Management.
+                <br />
+                <i>Use code <code>keycloakify5</code> at checkout for a 5% discount.</i>
                 <br />
                 <br />
-                <i>Use the promo code <code>keycloakify5</code> to get 5% off your annual subscription and support us.</i>
               </>}
               iconUrls={[cloudIamPngUrl]}
               buttonLabel="Check them out"
@@ -314,12 +334,13 @@ Whether or not React is your preferred framework, Keycloakify offers a solid opt
                 "href": "https://cloud-iam.com/?mtm_campaign=keycloakify-deal&mtm_source=keycloakify-web-site"
               }}
             />
+
           </GlCards>
         </>
       }
       footer={
         <GlFooter
-          bottomDivContent={`[Page created with GitLanding](https://www.gitlanding.dev)`}
+          bottomDivContent={`[Edit this website](https://github.com/keycloakify/www.keycloakify.dev)`}
           links={[
             {
               "href": "https://www.npmjs.com/package/keycloakify",
@@ -363,7 +384,7 @@ export const { i18n } = declareComponentKeys<
   | "ok"
 >()({ App })
 
-const useStyles = makeStyles({ "name": { App } })(theme => ({
+const useStyles = makeStyles({ "name": { App } })((theme, _params, classes) => ({
   "headerTitleWrapper": {
     "display": "flex",
     "cursor": "pointer",
@@ -409,11 +430,20 @@ const useStyles = makeStyles({ "name": { App } })(theme => ({
   "subtitle": {
     "color": theme.colors.useCases.typography.textPrimary
   },
+  "cards": {
+    "display": "flex",
+    "flexDirection": "column",
+    "alignItems": "center",
+  },
   "sponsorCardsWrapper": {
     "display": "flex",
-    "justifyContent": "center"
+    "justifyContent": "center",
+    "flex-wrap": "wrap",
+    "flexDirection": theme.windowInnerWidth > breakpointsValues.md ? "row" : "column",
+    "maxWidth": 1200
   },
   "sponsorCard": {
     ...theme.spacing.rightLeft("padding", 5),
+    "flex": 1
   }
 }));
