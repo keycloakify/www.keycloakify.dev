@@ -28,8 +28,8 @@ import cloudIamPngUrl from "assets/img/cloud-iam.png";
 import zone2ForDarkModePngUrl from "assets/img/zone2_for_dark_mode.png";
 import zone2ForLightModePngUrl from "assets/img/zone2_for_light_mode.png";
 import { breakpointsValues } from "gitlanding";
-
-//import { GlYoutubeVideoSection } from "gitlanding/GlYoutubeVideoSection";
+import tailwindPngUrl from "assets/img/tailwind.png";
+import { GlYoutubeVideoSection } from "gitlanding/GlYoutubeVideoSection";
 
 const githubRepoUrl = "https://github.com/InseeFrLab/keycloakify";
 const documentationUrl = "https://docs.keycloakify.dev";
@@ -115,7 +115,7 @@ export function App() {
             title={
               <>
                 <GlHeroText>Keycloak theming</GlHeroText>
-                <Text typo="display heading" className={classes.title2}>Made easy. With React.</Text>
+                <Text typo="display heading" className={classes.title2}>For the modern web.</Text>
               </>
             }
             subTitle={`
@@ -172,11 +172,33 @@ Wouldn't it be great if we could just design the login and register pages as if 
           />
 
           <GlArticle
-            title="Batteries included"
-            body={`Keycloakify bundles your theme into a single \`.jar\` that you'll be able to import
+            title="Using React is just an option"
+            body={`Keycloakify is first and foremost a tool to help you 
+build and test your theme in [Storybook](https://docs.keycloakify.dev/testing-your-theme/in-storybook) or 
+in a local [Keycloak container](https://docs.keycloakify.dev/testing-your-theme/in-a-keycloak-docker-container) with hot-reload.  
+You can use React if you want to use your own components or fancy libraries like [MUI](https://mui.com/joy-ui/getting-started/templates/sign-in-side/) or [Shadcn/ui](https://ui.shadcn.com/examples/authentication) 
+but it's not mandatory.  
+You can also customize the pages without touching React using CSS, [SCSS](https://sass-lang.com/), [Tailwind](https://tailwindcss.com/), 
+[Bootstrap](https://getbootstrap.com/), [@emotion/css](https://emotion.sh/docs/@emotion/css), you name it.  
+              `}
+            buttonLabel={`Get started`}
+            buttonLink={{ "href": documentationUrl }}
+            illustration={
+              {
+                "type": "image",
+                "src": tailwindPngUrl,
+                "hasShadow": true
+              }
+            }
+            hasAnimation={true}
+            illustrationPosition="left"
+          />
+
+          <GlArticle
+            title="Easy to deploy"
+            body={`Keycloakify bundles your login, account and email theme into a single \`.jar\` that you'll be able to import
                   into your keycloak server.  
-                  The Keycloak themes generated with Keycloakify are compatible with all Keycloak versions down to Keycloak version 11, by 
-                  opposition to regular themes that must be updated to target a specific Keycloak version.`}
+                  The Keycloak themes generated with Keycloakify are compatible with all Keycloak versions.`}
             buttonLabel={`Get started`}
             buttonLink={{ "href": documentationUrl }}
             illustration={
@@ -245,41 +267,41 @@ Wouldn't it be great if we could just design the login and register pages as if 
             hasAnimation={true}
             elements={[
               {
-                "title": "Vite, Webpack and mono-repo support",
-                "description": `Keycloakify can be integrated [directly within a Vite or Webpack project](https://docs.keycloakify.dev/keycloakify-in-my-codebase/in-your-react-project) 
+                "title": "Easy to integrate in your codebase",
+                "description": `Keycloakify can be integrated [directly within an existing Vite or Webpack project](https://docs.keycloakify.dev/keycloakify-in-my-codebase/in-your-react-project) 
                                 or [as a submodule of your monorepo](https://docs.keycloakify.dev/keycloakify-in-my-codebase/as-a-subproject-of-your-monorepo).`,
               },
               {
-                "title": "[Easily testable](https://docs.keycloakify.dev/testing-your-theme)",
-                "description": `Test your theme in storybook or in a local Keycloak container with a simple command.`,
+                "title": "Easily testable",
+                "description": `Test your theme [in storybook](https://docs.keycloakify.dev/testing-your-theme/in-storybook) or 
+                in [a local Keycloak container](https://docs.keycloakify.dev/testing-your-theme/in-a-keycloak-docker-container) with a simple command.`,
               },
               {
-                "title": "Tailwind, MUI, shadcn/ui... you name it",
-                "description": `Keycloakify let you use any component library or styling solution you want. [Including Tailwind](https://docs.keycloakify.dev/customization-strategies/css-level-customization/using-tailwind).`,
+                "title": "Retro-compatible",
+                "description": `Themes generated with Keycloakify are compatible with all Keycloak versions. 
+                You develop your theme like if you were targeting the latest Keycloak version and Keycloakify will polyfill the missing features for you.`,
               },
               {
                 "title": "We are here to help!",
                 "description": `We are happy to provide support on our [Discord server](https://discord.gg/mJdYJSdcm4) that has many active users and some members of core Keycloak team.`,
               },
               {
-                "title": "Shallow or advanced customization, it's up to you",
-                "description": `You can customize the theme either [at the CSS level](https://docs.keycloakify.dev/customization-strategies/css-level-customization) or
-                              [at the component level](https://docs.keycloakify.dev/customization-strategies/component-level-customization) for more advanced customization.`,
+                "title": "Theme variants",
+                "description": `Keycloakify enables you to create [theme variants](https://docs.keycloakify.dev/theme-variants) and theme dynamically 
+                customizable with [environnement variables](https://docs.keycloakify.dev/environment-variables).`,
               },
               {
-                "title": "Feature parity",
-                "description": `Everything that works in the default Keycloak theme also works in Keycloakify themes.`,
+                "title": "Feature complete",
+                "description": `Everything that works in the default Keycloak theme also works in Keycloakify themes. Beyond that Keycloakify adds **many** of exclusive features.`,
               },
             ]}
           />
 
-          {/*
           <GlYoutubeVideoSection
-            title={"Introduction video"}
-            src="https://www.youtube.com/embed/x3ux2JM1Bxk"
+            title={"Keycloakify from the point of view of a React developer"}
+            src="https://www.youtube.com/embed/BPAayGPmQZI?si=oM4tzn4vEszwW8Ye"
             hasAnimation={true}
           />
-          */}
 
           <GlCards
             title={
@@ -336,6 +358,7 @@ Wouldn't it be great if we could just design the login and register pages as if 
             />
 
           </GlCards>
+
         </>
       }
       footer={
