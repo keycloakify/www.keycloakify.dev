@@ -222,7 +222,7 @@ You can also customize the pages without touching React using CSS, [SCSS](https:
 
             }
             hasAnimation={true}
-            illustrationPosition="left"
+            illustrationPosition="right"
           />
 
           <GlArticle
@@ -250,13 +250,9 @@ You can also customize the pages without touching React using CSS, [SCSS](https:
                   ],
                 "hasShadow": true
               }
-
-
-
-
             }
             hasAnimation={true}
-            illustrationPosition="right"
+            illustrationPosition="left"
           />
 
           <GlSectionDivider />
