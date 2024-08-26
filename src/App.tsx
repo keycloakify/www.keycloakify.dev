@@ -196,7 +196,7 @@ You can also customize the pages without touching React using CSS, [SCSS](https:
 
           <GlArticle
             title="Easy to deploy"
-            body={`Keycloakify bundles your login, account and email theme into a single \`.jar\` that you'll be able to import
+            body={`Keycloakify bundles your **login**, **account** and **email** theme into **a single \`.jar\`** that you'll be able to import
                   into your keycloak server.  
                   The Keycloak themes generated with Keycloakify are compatible with all Keycloak versions.`}
             buttonLabel={`Get started`}
