@@ -263,6 +263,23 @@ You can also customize the pages without touching React using CSS, [SCSS](https:
             hasAnimation={true}
             elements={[
               {
+                "title": "Widely Adopted",
+                "description": `Keycloakify is trusted by leading tech companies like [Neon](https://neon.tech/) and [Corsair](https://www.corsair.com/).  
+                                It is used in production by cybersecurity firms like [Ironwood](https://www.ironwoodcyber.com/) and in the public sector by organizations such as the [European Data Science Platform](https://datalab.sspcloud.fr/) 
+                                and official French government websites like [this one](https://code.gouv.fr/sill/).`
+              },
+              {
+                "title": "Optimized Performance",
+                "description": `Keycloakify merely increases the page payload by 10%, but those extra bytes dramatically improve the user experience.  
+                                Additionally, if you customize your theme without relying on [the default styles](https://www.patternfly.org/), you can **significantly**
+                                reduce the payload compared to the default theme. (Patternfly is quite heavy when compared to solution with style extraction like Tailwind)`
+              },
+              {
+                "title": "Retro-compatible",
+                "description": `Themes generated with Keycloakify are compatible with all Keycloak versions. 
+                You develop your theme like if you were targeting the latest Keycloak version and Keycloakify will polyfill the missing features for you.`,
+              },
+              {
                 "title": "Easy to integrate in your codebase",
                 "description": `Keycloakify can be integrated [directly within an existing Vite or Webpack project](https://docs.keycloakify.dev/keycloakify-in-my-codebase/in-your-react-project) 
                                 or [as a submodule of your monorepo](https://docs.keycloakify.dev/keycloakify-in-my-codebase/as-a-subproject-of-your-monorepo).`,
@@ -271,11 +288,6 @@ You can also customize the pages without touching React using CSS, [SCSS](https:
                 "title": "Easily testable",
                 "description": `Test your theme [in storybook](https://docs.keycloakify.dev/testing-your-theme/in-storybook) or 
                 in [a local Keycloak container](https://docs.keycloakify.dev/testing-your-theme/in-a-keycloak-docker-container) with a simple command.`,
-              },
-              {
-                "title": "Retro-compatible",
-                "description": `Themes generated with Keycloakify are compatible with all Keycloak versions. 
-                You develop your theme like if you were targeting the latest Keycloak version and Keycloakify will polyfill the missing features for you.`,
               },
               {
                 "title": "We are here to help!",
@@ -290,6 +302,11 @@ You can also customize the pages without touching React using CSS, [SCSS](https:
                 "title": "Feature complete",
                 "description": `Everything that works in the default Keycloak theme also works in Keycloakify themes. Beyond that Keycloakify adds **many** of exclusive features.`,
               },
+              {
+                "title": "Doesn't Bloat your node_modules",
+                "description": `The Keycloakify NPM package is [dependency free](https://www.npmjs.com/package/keycloakify?activeTab=dependencies).  
+                                The CLI is shipped as a single executable.`
+              }
             ]}
           />
 
