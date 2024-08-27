@@ -300,7 +300,7 @@ You can also customize the pages without touching React using CSS, [SCSS](https:
               },
               {
                 "title": "Feature complete",
-                "description": `Everything that works in the default Keycloak theme also works in Keycloakify themes. Beyond that Keycloakify adds **many** of exclusive features.`,
+                "description": `Everything that works in the default Keycloak theme also works in Keycloakify themes. Beyond that Keycloakify adds **many** exclusive features.`,
               },
               {
                 "title": "Doesn't Bloat your node_modules",
