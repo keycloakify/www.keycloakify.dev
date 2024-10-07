@@ -1,36 +1,23 @@
 import {
-    createThemeProvider,
-    defaultGetTypographyDesc
+  createOnyxiaUi,
+  francePalette,
+  defaultGetTypographyDesc,
 } from "onyxia-ui";
-import { createMakeStyles } from "tss-react";
-import { createLanguageSelect } from "onyxia-ui/LanguageSelect";
-import type { Language } from "i18n";
-import { createText } from "onyxia-ui/Text";
-import { createButton } from "onyxia-ui/Button";
-import { createIcon } from "onyxia-ui/Icon";
-import { francePalette } from "onyxia-ui";
-//import { ultravioletPalette } from "onyxia-ui";
 
-export const { ThemeProvider, useTheme } = createThemeProvider({
-    "getTypographyDesc": params => ({
-        ...defaultGetTypographyDesc(params),
-        "fontFamily": '"Work Sans", sans-serif'
-    }),
-    "palette": francePalette
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const { OnyxiaUi, ofTypeTheme } = createOnyxiaUi({
+  BASE_URL: import.meta.env.BASE_URL,
+  getTypographyDesc: (params) => {
+    const typographyDesc = defaultGetTypographyDesc(params);
+
+    return {
+      ...typographyDesc,
+      fontFamily: '"Work Sans", sans-serif',
+    };
+  },
+  palette: francePalette,
 });
 
-export const { makeStyles } = createMakeStyles({ useTheme });
+type Theme = typeof ofTypeTheme;
 
-export const { Text } = createText({ useTheme });
-
-const { Icon } = createIcon({});
-
-export const { Button } = createButton({ Icon });
-
-export const { LanguageSelect } = createLanguageSelect<Language>({
-    "languagesPrettyPrint": {
-        "en": "English",
-        "fr": "Français",
-        "zh-CN": "简体中文"
-    }
-});
+export { OnyxiaUi, type Theme };
