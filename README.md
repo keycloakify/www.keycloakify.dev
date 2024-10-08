@@ -10,5 +10,5 @@ It's a [GitLanding](https://gitlanding.dev) website.
 git clone https://github.com/keycloakify/www.keycloakify.dev
 cd www.keycloakify.dev
 yarn
-yarn start
+yarn dev
 ```
