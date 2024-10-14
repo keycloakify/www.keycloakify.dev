@@ -5,6 +5,7 @@ import themeSelectWebmUrl from "assets/video/theme_select-vp9-chrome.webm";
 import themeSelectMp4Url from "assets/video/theme_select.mp4";
 import frontendValidationMp4Url from "assets/video/keycloakify_frontend_validation.mp4";
 import frontendValidationWebmUrl from "assets/video/keycloakify_frontend_validation-vp9-chrome.webm";
+import phaseTwoSvgUrl from "assets/img/phasetwo.svg";
 import { GlSectionDivider } from "gitlanding/GlSectionDivider";
 import { GlCheckList } from "gitlanding/GlCheckList";
 import { GlCards } from "gitlanding/GlCards";
@@ -19,6 +20,10 @@ import { Hero } from "./Hero";
 import { DOCUMENTATION_URL } from "constants";
 import { tss } from "tss";
 import { breakpointsValues } from "onyxia-ui";
+import StarsIcon from '@mui/icons-material/Stars';
+import { Icon } from "onyxia-ui/Icon";
+import { Tooltip } from "onyxia-ui/Tooltip";
+import { Markdown } from "onyxia-ui/Markdown";
 
 export function Body() {
   const { classes, css, theme } = useStyle();
@@ -218,13 +223,82 @@ You can also customize the pages without touching React using CSS, [SCSS](https:
           cardsWrapper: classes.sponsorCardsWrapper,
         }}
       >
+
+        <GlLogoCard
+          className={classes.sponsorCard}
+          classes={{
+            iconWrapper: css({
+              marginTop: 55,
+              "& > svg": (() => {
+                const width = 280;
+
+                return {
+                  width,
+                  height: width * 0.255,
+                  "& #Group-18-Copy-2 > path": {
+                    fill: theme.isDarkModeEnabled ?  theme.colors.useCases.typography.textPrimary : undefined
+                  }
+                } as const;
+
+              })(),
+            }),
+            textWrapper: css({
+              "marginTop": theme.windowInnerWidth > breakpointsValues.md ? 50 : undefined,
+            })
+          }}
+          title="Keycloak on Steroids as a Service"
+          paragraph={
+            <>
+              <Tooltip
+                title={
+                  <>
+                    Along with their financial support, PhaseTwo helps on the Java side of things
+                    going as far as <strong>submitting PRs to Keycloak</strong> to streamline Keycloakify integration.
+                  </>
+                }
+              >
+                <Text
+                  typo="object heading"
+                  className={css({
+                    position: "absolute",
+                    top: theme.spacing(3),
+                    right: theme.spacing(3) + 10,
+                    marginBottom: theme.spacing(2),
+                    display: "inline-flex",
+                    gap: theme.spacing(1),
+                    alignItems: "center",
+                    color: theme.isDarkModeEnabled ? "#D4AF37": "#FFD700",
+                  })}
+                >
+                  <Icon icon={StarsIcon} />
+                  <span>Major Code Contributors</span>
+                </Text>
+              </Tooltip>
+              <Markdown>
+                Keycloak community contributors of popular
+                [extensions](https://github.com/p2-inc#our-extensions-)
+                providing free and dedicated [Keycloak
+                hosting](https://phasetwo.io/hosting/) and enterprise [Keycloak
+                support](https://phasetwo.io/support/) to businesses of all
+                sizes.
+              </Markdown>
+            </>
+          }
+          iconUrls={[phaseTwoSvgUrl]}
+          buttonLabel="Check them out"
+          link={{
+            href: "https://phasetwo.io/",
+          }}
+        />
+
+
         <GlLogoCard
           className={classes.sponsorCard}
           classes={{
             iconWrapper: css({
               "& > img": {
                 width: 300,
-                paddingTop: theme.spacing(4),
+                paddingTop: theme.spacing(6) + 8,
               },
             }),
           }}
@@ -246,10 +320,14 @@ You can also customize the pages without touching React using CSS, [SCSS](https:
           }}
         />
 
+
         <GlLogoCard
           className={classes.sponsorCard}
           classes={{
-            iconWrapper: css({ "& > img": { width: 145 } }),
+            iconWrapper: css({ 
+              "marginTop": 20,
+              "& > img": { width: 145 } 
+            }),
           }}
           title="Cloud-IAM"
           paragraph={
@@ -288,10 +366,11 @@ const useStyle = tss.withName({ Body }).create(({ theme }) => ({
     "flex-wrap": "wrap",
     flexDirection:
       theme.windowInnerWidth > breakpointsValues.md ? "row" : "column",
-    maxWidth: 1200,
+    maxWidth: 1500,
   },
   sponsorCard: {
     ...theme.spacing.rightLeft("padding", 5),
     flex: 1,
+    position: "relative",
   },
 }));
