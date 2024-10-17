@@ -246,13 +246,13 @@ You can also customize the pages without touching React using CSS, [SCSS](https:
               "marginTop": theme.windowInnerWidth > breakpointsValues.md ? 50 : undefined,
             })
           }}
-          title="Keycloak on Steroids as a Service"
+          title="Keycloak as a Service"
           paragraph={
             <>
               <Tooltip
                 title={
                   <>
-                    Along with their financial support, PhaseTwo helps on the Java side of things
+                    Along with their financial support, Phase Two helps on the Java side of things
                     going as far as <strong>submitting PRs to Keycloak</strong> to streamline Keycloakify integration.
                   </>
                 }
@@ -276,10 +276,10 @@ You can also customize the pages without touching React using CSS, [SCSS](https:
               </Tooltip>
               <Markdown>
                 Keycloak community contributors of popular
-                [extensions](https://github.com/p2-inc#our-extensions-)
+                [extensions](https://github.com/p2-inc#our-extensions-?utm_source=keycloakify)
                 providing free and dedicated [Keycloak
-                hosting](https://phasetwo.io/hosting/) and enterprise [Keycloak
-                support](https://phasetwo.io/support/) to businesses of all
+                hosting](https://phasetwo.io/hosting/?utm_source=keycloakify) and enterprise [Keycloak
+                support](https://phasetwo.io/support/?utm_source=keycloakify) to businesses of all
                 sizes.
               </Markdown>
             </>
@@ -287,7 +287,7 @@ You can also customize the pages without touching React using CSS, [SCSS](https:
           iconUrls={[phaseTwoSvgUrl]}
           buttonLabel="Check them out"
           link={{
-            href: "https://phasetwo.io/",
+            href: "https://phasetwo.io?utm_source=keycloakify",
           }}
         />
 

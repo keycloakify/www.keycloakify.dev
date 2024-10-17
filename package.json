@@ -14,7 +14,7 @@
     "@emotion/styled": "^11.13.0",
     "@mui/icons-material": "^5.16.7",
     "@mui/material": "5.16.7",
-    "gitlanding": "^2.0.8",
+    "gitlanding": "^2.0.12",
     "onyxia-ui": "^5.4.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
