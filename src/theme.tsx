@@ -6,7 +6,6 @@ import {
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const { OnyxiaUi, ofTypeTheme } = createOnyxiaUi({
-  BASE_URL: import.meta.env.BASE_URL,
   getTypographyDesc: (params) => {
     const typographyDesc = defaultGetTypographyDesc(params);
 
