@@ -179,7 +179,7 @@ You can also customize the pages without touching React using CSS, [SCSS](https:
           {
             title: "Theme variants",
             description: `Keycloakify enables you to create [theme variants](https://docs.keycloakify.dev/theme-variants) and theme dynamically 
-                customizable with [environnement variables](https://docs.keycloakify.dev/environment-variables).`,
+                customizable with [environment variables](https://docs.keycloakify.dev/environment-variables).`,
           },
           {
             title: "Feature complete",
