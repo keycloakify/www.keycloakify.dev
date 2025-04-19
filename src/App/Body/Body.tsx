@@ -321,6 +321,7 @@ You can also customize the pages without touching React using CSS, [SCSS](https:
         />
 
 
+        {/*
         <GlLogoCard
           className={classes.sponsorCard}
           classes={{
@@ -349,6 +350,7 @@ You can also customize the pages without touching React using CSS, [SCSS](https:
             href: "https://cloud-iam.com/?mtm_campaign=keycloakify-deal&mtm_source=keycloakify-web-site",
           }}
         />
+        */}
       </GlCards>
     </>
   );
