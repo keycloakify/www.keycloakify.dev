@@ -117,7 +117,7 @@ You can also customize the pages without touching React using CSS, [SCSS](https:
         title="It's not just cosmetics"
         body={`Keycloakify enables you to greatly improve the UX of your login and registration pages
           by enabling realtime input validation.
-          Define **from the Keycloak admin consol** your validator and provide instantaneous feedback to your users.  
+          Define **from the Keycloak admin console** your validator and provide instantaneous feedback to your users.  
           Best yet, it work **out of the box** with any theme generated with Keycloakify.`}
         buttonLabel={`Get started`}
         buttonLink={{ href: "https://docs.keycloakify.dev" }}
