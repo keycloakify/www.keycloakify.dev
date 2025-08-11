@@ -211,7 +211,7 @@ You can also customize the pages without touching React using CSS, [SCSS](https:
               })}
             >
               {" "}
-              Sponsors{" "}
+              Sponsor{" "}
             </Text>
             <Text typo="subtitle">
               Backers of the project, we trust and recommend their services
@@ -292,6 +292,7 @@ You can also customize the pages without touching React using CSS, [SCSS](https:
         />
 
 
+          {/*
         <GlLogoCard
           className={classes.sponsorCard}
           classes={{
@@ -319,6 +320,7 @@ You can also customize the pages without touching React using CSS, [SCSS](https:
             href: "https://www.zone2.tech/services/keycloak-consulting",
           }}
         />
+        */}
 
 
         {/*
@@ -368,7 +370,8 @@ const useStyle = tss.withName({ Body }).create(({ theme }) => ({
     "flex-wrap": "wrap",
     flexDirection:
       theme.windowInnerWidth > breakpointsValues.md ? "row" : "column",
-    maxWidth: 1500,
+    //maxWidth: 1500,
+    maxWidth: 500,
   },
   sponsorCard: {
     ...theme.spacing.rightLeft("padding", 5),
