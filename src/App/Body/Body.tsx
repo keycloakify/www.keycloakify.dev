@@ -169,8 +169,8 @@ You can also customize the pages without touching React using CSS, [SCSS](https:
           },
           {
             title: "Easily testable",
-            description: `Test your theme [in storybook](https://docs.keycloakify.dev/testing-your-theme/in-storybook) or 
-                in [a local Keycloak container](https://docs.keycloakify.dev/testing-your-theme/in-a-keycloak-docker-container) with a simple command.`,
+            description: `Test your theme [in storybook](https://docs.keycloakify.dev/testing-your-theme/outside-of-keycloak) or 
+                in [a local Keycloak container](https://docs.keycloakify.dev/testing-your-theme/inside-of-keycloak) with a simple command.`,
           },
           {
             title: "We are here to help!",
