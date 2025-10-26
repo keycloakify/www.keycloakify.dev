@@ -70,8 +70,8 @@ Wouldn't it be great if we could just design the login and register pages as if 
       <GlArticle
         title="Using React is just an option"
         body={`Keycloakify is first and foremost a tool to help you 
-build and test your theme in [Storybook](https://docs.keycloakify.dev/testing-your-theme/in-storybook) or 
-in a local [Keycloak container](https://docs.keycloakify.dev/testing-your-theme/in-a-keycloak-docker-container) with hot-reload.  
+build and test your theme in [Storybook](https://docs.keycloakify.dev/testing-your-theme/outside-of-keycloak) or 
+in a local [Keycloak container](https://docs.keycloakify.dev/testing-your-theme/inside-of-keycloak) with hot-reload.  
 You can use React if you want to use your own components or fancy libraries like [MUI](https://mui.com/joy-ui/getting-started/templates/sign-in-side/) or [Shadcn/ui](https://ui.shadcn.com/examples/authentication) 
 but it's not mandatory.  
 You can also customize the pages without touching React using CSS, [SCSS](https://sass-lang.com/), [Tailwind](https://tailwindcss.com/), 
