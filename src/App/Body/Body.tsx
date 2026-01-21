@@ -152,10 +152,8 @@ You can also customize the pages without touching React using CSS, [SCSS](https:
                                 and official French government websites like [this one](https://code.gouv.fr/sill/).`,
           },
           {
-            title: "Optimized Performance",
-            description: `Keycloakify merely increases the page payload by 10%, but those extra bytes dramatically improve the user experience.  
-                                Additionally, if you customize your theme without relying on [the default styles](https://www.patternfly.org/), you can **significantly**
-                                reduce the payload compared to the default theme. (Patternfly is quite heavy when compared to solution with style extraction like Tailwind)`,
+            title: "ShadCN/TypeScript",
+            description: `Keycloakify feature an alternative default look for the login pages based on ShadCN / Tailwind. [See starter Theme](https://docs.keycloakify.dev/starter-themes/shadcn-ui-tailwind)`,
           },
           {
             title: "Retro-compatible",
