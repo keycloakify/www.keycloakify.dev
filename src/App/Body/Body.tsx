@@ -164,8 +164,8 @@ You can also customize the pages without touching React using CSS, [SCSS](https:
           },
           {
             title: "Easy to integrate in your codebase",
-            description: `Keycloakify can be integrated [directly within an existing Vite or Webpack project](https://docs.keycloakify.dev/keycloakify-in-my-codebase/in-your-react-project) 
-                                or [as a submodule of your monorepo](https://docs.keycloakify.dev/keycloakify-in-my-codebase/as-a-subproject-of-your-monorepo).`,
+            description: `Keycloakify can be integrated directly within an existing Vite SPA 
+                                or as a submodule of your monorepo. See [Docs](https://docs.keycloakify.dev/integration-keycloakify-in-your-codebase)`,
           },
           {
             title: "Easily testable",
