@@ -1,0 +1,33 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": ["typescript", "react", "unicorn", "oxc", "import", "jsx-a11y"],
+  "categories": {
+    "correctness": "error",
+    "suspicious": "warn"
+  },
+  "env": {
+    "browser": true,
+    "es2022": true
+  },
+  "ignorePatterns": ["dist", ".claude"],
+  "rules": {
+    "react/react-in-jsx-scope": "off",
+    "react/rules-of-hooks": "error",
+    "react/exhaustive-deps": "warn",
+    "react/only-export-components": ["warn", { "allowConstantExport": true }],
+    "import/no-unassigned-import": ["warn", { "allow": ["**/*.css"] }],
+    // Base UI composes elements through the `render` prop, the content and
+    // label are passed as children of the wrapping component.
+    "jsx-a11y/anchor-has-content": "off",
+    "jsx-a11y/control-has-associated-label": "off"
+  },
+  "overrides": [
+    {
+      // shadcn/ui components export their variants next to the component.
+      "files": ["src/components/ui/**"],
+      "rules": {
+        "react/only-export-components": "off"
+      }
+    }
+  ]
+}
