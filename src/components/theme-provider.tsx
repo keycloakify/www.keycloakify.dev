@@ -51,6 +51,7 @@ export function ThemeProvider({
 
   useEffect(() => {
     const stored = localStorage.getItem(storageKey);
+    // oxlint-disable-next-line react/set-state-in-effect
     setThemeState(
       stored === "light" || stored === "dark" || stored === "system" ? stored : defaultTheme,
     );
@@ -84,6 +85,7 @@ export function ThemeProvider({
   );
 }
 
+// oxlint-disable-next-line react/only-export-components
 export function useTheme() {
   const context = useContext(ThemeProviderContext);
   if (context === undefined) throw new Error("useTheme must be used within a ThemeProvider");
