@@ -1,5 +1,5 @@
 import PhaseTwoLogo from "#assets/img/phasetwo.svg?react";
-import codeGouvSvgUrl from "#assets/img/users/code-gouv.svg";
+import gouvSvgUrl from "#assets/img/users/gouv.svg";
 import CorsairLogo from "#assets/img/users/corsair.svg?react";
 import ironwoodPngUrl from "#assets/img/users/ironwood.png";
 import NeonLogo from "#assets/img/users/neon.svg?react";
@@ -54,10 +54,10 @@ const users = [
   },
   {
     name: "gouv.fr",
-    href: "https://code.gouv.fr/sill/",
+    href: "https://camino.developpement-durable.gouv.fr",
     logo: (
       <img
-        src={codeGouvSvgUrl}
+        src={gouvSvgUrl}
         alt=""
         width={28}
         height={28}
