@@ -42,7 +42,7 @@ export function SiteHeader() {
         </button>
 
         <div className="flex items-center gap-1">
-          <nav className="hidden items-center gap-1 md:flex">
+          <nav className="hidden items-center gap-1 lg:flex">
             {links.map(({ label, href }) => (
               <a
                 key={label}
@@ -70,7 +70,7 @@ export function SiteHeader() {
           <ModeToggle />
           <DropdownMenu>
             <DropdownMenuTrigger
-              render={<Button variant="outline" size="icon" className="md:hidden" />}
+              render={<Button variant="outline" size="icon" className="lg:hidden" />}
             >
               <MenuIcon />
               <span className="sr-only">Open menu</span>

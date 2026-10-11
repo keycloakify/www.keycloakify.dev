@@ -1,9 +1,10 @@
+import { PaletteIcon } from "lucide-react";
 import * as m from "motion/react-m";
 import { GithubIcon } from "#components/brand-icons";
 import { CopyButton } from "#components/copy-button";
 import { HeroGraphic } from "#components/hero-graphic";
 import { Button } from "#components/ui/button";
-import { DOCUMENTATION_URL, GITHUB_REPO_URL } from "#constants";
+import { DOCUMENTATION_URL, EDITOR_APP_URL, GITHUB_REPO_URL } from "#constants";
 import { revealVariants, staggerVariants } from "#lib/motion";
 
 const STARTER_COMMAND = "git clone https://github.com/keycloakify/keycloakify-starter";
@@ -33,7 +34,10 @@ export function Hero() {
             with FreeMarker.
           </m.p>
 
-          <m.div variants={revealVariants} className="mt-2 flex flex-wrap items-center gap-3">
+          <m.div
+            variants={revealVariants}
+            className="mt-2 flex flex-wrap items-center gap-3 max-lg:justify-center"
+          >
             <Button
               size="lg"
               nativeButton={false}
@@ -51,6 +55,16 @@ export function Hero() {
             >
               <GithubIcon data-icon="inline-start" />
               View on GitHub
+            </Button>
+            <Button
+              variant="outline"
+              size="lg"
+              nativeButton={false}
+              render={<a href={EDITOR_APP_URL} target="_blank" rel="noopener noreferrer" />}
+              className="h-10 px-4"
+            >
+              <PaletteIcon data-icon="inline-start" />
+              Try the editor
             </Button>
           </m.div>
 
