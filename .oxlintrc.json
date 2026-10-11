@@ -9,7 +9,7 @@
     "browser": true,
     "es2022": true
   },
-  "ignorePatterns": ["dist", ".claude"],
+  "ignorePatterns": ["dist", ".claude", "src/routeTree.gen.ts"],
   "rules": {
     "react/react-in-jsx-scope": "off",
     "react/rules-of-hooks": "error",
@@ -25,6 +25,13 @@
     {
       // shadcn/ui components export their variants next to the component.
       "files": ["src/components/ui/**"],
+      "rules": {
+        "react/only-export-components": "off"
+      }
+    },
+    {
+      // Route files export their `Route` next to the page component.
+      "files": ["src/routes/**"],
       "rules": {
         "react/only-export-components": "off"
       }

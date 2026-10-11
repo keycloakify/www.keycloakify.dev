@@ -1,80 +1,91 @@
 import { createContext, useContext, useEffect, useState } from "react";
+import { ScriptOnce } from "@tanstack/react-router";
 
 type Theme = "dark" | "light" | "system";
 
+type ThemeProviderProps = {
+  children: React.ReactNode;
+  defaultTheme?: Theme;
+  storageKey?: string;
+};
+
 type ThemeProviderState = {
   theme: Theme;
-  resolvedTheme: "dark" | "light";
   setTheme: (theme: Theme) => void;
 };
 
-// NOTE: Keep in sync with the inline script in index.html
-const STORAGE_KEY = "keycloakify-ui-theme";
+function getThemeScript(storageKey: string, defaultTheme: Theme) {
+  const key = JSON.stringify(storageKey);
+  const fallback = JSON.stringify(defaultTheme);
 
-const ThemeProviderContext = createContext<ThemeProviderState | undefined>(undefined);
-
-function getSystemTheme(): "dark" | "light" {
-  return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  return `(function(){try{var t=localStorage.getItem(${key});if(t!=='light'&&t!=='dark'&&t!=='system'){t=${fallback}}var d=matchMedia('(prefers-color-scheme: dark)').matches;var r=t==='system'?(d?'dark':'light'):t;var e=document.documentElement;e.classList.add(r);e.style.colorScheme=r}catch(e){}})();`;
 }
 
-function getStoredTheme(): Theme {
-  try {
-    const value = localStorage.getItem(STORAGE_KEY);
-    if (value === "dark" || value === "light" || value === "system") {
-      return value;
-    }
-  } catch {
-    // Storage can be unavailable (private mode, blocked site data)
-  }
-  return "system";
+const ThemeProviderContext = createContext<ThemeProviderState>({
+  theme: "system",
+  setTheme: () => {},
+});
+
+function applyTheme(theme: Theme) {
+  const root = document.documentElement;
+  root.classList.remove("light", "dark");
+
+  const resolved =
+    theme === "system"
+      ? window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "dark"
+        : "light"
+      : theme;
+
+  root.classList.add(resolved);
+  root.style.colorScheme = resolved;
 }
 
-export function ThemeProvider(props: { children: React.ReactNode }) {
-  const { children } = props;
-
-  const [theme, setThemeState] = useState<Theme>(getStoredTheme);
-  const [systemTheme, setSystemTheme] = useState(getSystemTheme);
-
-  useEffect(() => {
-    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
-    const onChange = () => setSystemTheme(getSystemTheme());
-
-    mediaQuery.addEventListener("change", onChange);
-    return () => mediaQuery.removeEventListener("change", onChange);
-  }, []);
-
-  const resolvedTheme = theme === "system" ? systemTheme : theme;
+export function ThemeProvider({
+  children,
+  defaultTheme = "system",
+  storageKey = "theme",
+}: ThemeProviderProps) {
+  const [theme, setThemeState] = useState<Theme>(defaultTheme);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    const root = document.documentElement;
+    const stored = localStorage.getItem(storageKey);
+    setThemeState(
+      stored === "light" || stored === "dark" || stored === "system" ? stored : defaultTheme,
+    );
+    setMounted(true);
+  }, [defaultTheme, storageKey]);
 
-    root.classList.toggle("dark", resolvedTheme === "dark");
-    root.style.colorScheme = resolvedTheme;
-  }, [resolvedTheme]);
+  useEffect(() => {
+    if (!mounted) return;
+    applyTheme(theme);
+  }, [theme, mounted]);
 
-  const setTheme = (newTheme: Theme) => {
-    try {
-      localStorage.setItem(STORAGE_KEY, newTheme);
-    } catch {
-      // Same as above, the choice just won't be remembered
-    }
-    setThemeState(newTheme);
+  useEffect(() => {
+    if (!mounted || theme !== "system") return;
+
+    const media = window.matchMedia("(prefers-color-scheme: dark)");
+    const onChange = () => applyTheme("system");
+    media.addEventListener("change", onChange);
+    return () => media.removeEventListener("change", onChange);
+  }, [theme, mounted]);
+
+  const setTheme = (next: Theme) => {
+    localStorage.setItem(storageKey, next);
+    setThemeState(next);
   };
 
   return (
-    <ThemeProviderContext.Provider value={{ theme, resolvedTheme, setTheme }}>
+    <ThemeProviderContext value={{ theme, setTheme }}>
+      <ScriptOnce>{getThemeScript(storageKey, defaultTheme)}</ScriptOnce>
       {children}
-    </ThemeProviderContext.Provider>
+    </ThemeProviderContext>
   );
 }
 
-// oxlint-disable-next-line react/only-export-components
 export function useTheme() {
   const context = useContext(ThemeProviderContext);
-
-  if (context === undefined) {
-    throw new Error("useTheme must be used within a ThemeProvider");
-  }
-
+  if (context === undefined) throw new Error("useTheme must be used within a ThemeProvider");
   return context;
 }
