@@ -1,7 +1,4 @@
-import { useState } from "react";
 import { MenuIcon } from "lucide-react";
-import { useMotionValueEvent, useScroll } from "motion/react";
-import * as m from "motion/react-m";
 import keycloakifyLogoPngUrl from "#assets/img/keycloakify-logo.png";
 import { DiscordIcon } from "#components/brand-icons";
 import { GithubStars } from "#components/github-stars";
@@ -23,14 +20,8 @@ const links = [
 ];
 
 export function SiteHeader() {
-  const isRetracted = useIsRetracted();
-
   return (
-    <m.header
-      animate={{ y: isRetracted ? "-100%" : 0 }}
-      transition={{ duration: 0.3, ease: "easeOut" }}
-      className="sticky top-0 z-50 bg-background/85 backdrop-blur-md"
-    >
+    <header className="sticky top-0 z-50 bg-background/85 backdrop-blur-md">
       <div className="wrapper flex items-center justify-between gap-4 border-b px-5 py-4 sm:px-6">
         <button
           type="button"
@@ -104,20 +95,6 @@ export function SiteHeader() {
           </DropdownMenu>
         </div>
       </div>
-    </m.header>
+    </header>
   );
-}
-
-/** Hides the header while scrolling down, brings it back when scrolling up. */
-function useIsRetracted() {
-  const { scrollY } = useScroll();
-  const [isRetracted, setIsRetracted] = useState(false);
-
-  useMotionValueEvent(scrollY, "change", (latest) => {
-    const previous = scrollY.getPrevious() ?? 0;
-
-    setIsRetracted(latest > previous && latest > 120);
-  });
-
-  return isRetracted;
 }

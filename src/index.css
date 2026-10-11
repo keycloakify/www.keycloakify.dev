@@ -38,6 +38,7 @@
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
   --animate-spin-slow: spin 20s linear infinite;
+  --animate-flow: flow 1.6s linear infinite;
 }
 
 :root {
@@ -136,5 +137,12 @@
     height: 5px;
     background-color: var(--color-muted-foreground);
     opacity: 0.5;
+  }
+}
+
+/* Moves a dashed stroke along its path, one dash period (2 + 10) per loop. */
+@keyframes flow {
+  to {
+    stroke-dashoffset: -12;
   }
 }

@@ -7,7 +7,7 @@ import { revealVariants, revealViewport, staggerVariants } from "#lib/motion";
 
 const elements: { title: string; description: React.ReactNode }[] = [
   {
-    title: "Widely Adopted",
+    title: "Widely adopted",
     description: (
       <>
         Keycloakify is trusted by leading tech companies like{" "}
@@ -26,13 +26,13 @@ const elements: { title: string; description: React.ReactNode }[] = [
     ),
   },
   {
-    title: "ShadCN/TypeScript",
+    title: "shadcn/ui and TypeScript",
     description: (
       <>
-        Keycloakify feature an alternative default look for the login pages based on ShadCN /
+        Keycloakify features an alternative default look for the login pages based on shadcn/ui and
         Tailwind.{" "}
         <ExternalLink href="https://docs.keycloakify.dev/starter-themes/shadcn-ui-tailwind">
-          See starter Theme
+          See the starter theme
         </ExternalLink>
       </>
     ),
@@ -42,8 +42,8 @@ const elements: { title: string; description: React.ReactNode }[] = [
     description: (
       <>
         Themes generated with Keycloakify are compatible with all Keycloak versions. You develop
-        your theme like if you were targeting the latest Keycloak version and Keycloakify will
-        polyfill the missing features for you.
+        your theme as if you were targeting the latest Keycloak version and Keycloakify polyfills
+        the missing features for you.
       </>
     ),
   },
@@ -81,7 +81,7 @@ const elements: { title: string; description: React.ReactNode }[] = [
       <>
         We are happy to provide support on our{" "}
         <ExternalLink href={DISCORD_URL}>Discord server</ExternalLink> that has many active users
-        and some members of core Keycloak team.
+        and some members of the core Keycloak team.
       </>
     ),
   },
@@ -90,11 +90,11 @@ const elements: { title: string; description: React.ReactNode }[] = [
     description: (
       <>
         Keycloakify enables you to create{" "}
-        <ExternalLink href="https://docs.keycloakify.dev/theme-variants">
+        <ExternalLink href="https://docs.keycloakify.dev/features/theme-variants">
           theme variants
         </ExternalLink>{" "}
-        and theme dynamically customizable with{" "}
-        <ExternalLink href="https://docs.keycloakify.dev/environment-variables">
+        and themes that are dynamically customizable with{" "}
+        <ExternalLink href="https://docs.keycloakify.dev/features/environment-variables">
           environment variables
         </ExternalLink>
         .
@@ -111,7 +111,7 @@ const elements: { title: string; description: React.ReactNode }[] = [
     ),
   },
   {
-    title: "Doesn't Bloat your node_modules",
+    title: "Doesn't bloat your node_modules",
     description: (
       <>
         The Keycloakify NPM package is{" "}

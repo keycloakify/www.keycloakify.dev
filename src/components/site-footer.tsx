@@ -75,7 +75,7 @@ const linkClassName =
 export function SiteFooter() {
   return (
     <footer>
-      <div className="wrapper grid grid-cols-2 gap-x-6 gap-y-10 border-t px-5 py-12 sm:px-10 sm:py-16 md:grid-cols-3 md:tick-left md:tick-right lg:grid-cols-[repeat(4,auto)_1fr] lg:gap-x-16 lg:px-16">
+      <div className="wrapper grid grid-cols-2 gap-x-6 gap-y-10 border-t px-5 py-12 sm:px-10 sm:py-16 md:grid-cols-3 md:tick-left md:tick-right lg:grid-cols-[repeat(5,auto)] lg:justify-between lg:gap-x-16 lg:px-16">
         {columns.map(({ title, links }) => (
           <nav key={title} aria-label={title} className="flex flex-col gap-4">
             <span className={titleClassName}>{title}</span>
@@ -96,7 +96,7 @@ export function SiteFooter() {
           </nav>
         ))}
 
-        <nav aria-label="Social" className="flex flex-col gap-4 lg:justify-self-end">
+        <nav aria-label="Social" className="flex flex-col gap-4">
           <span className={titleClassName}>Social</span>
           <ul className="flex flex-col gap-2.5">
             {socials.map(({ label, href, Icon }) => (
