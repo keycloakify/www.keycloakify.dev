@@ -12,11 +12,18 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "#components/ui/dropdown-menu";
-import { DISCORD_URL, DOCUMENTATION_URL, NPM_PACKAGE_URL, STORYBOOK_URL } from "#constants";
+import {
+  DISCORD_URL,
+  DOCUMENTATION_URL,
+  EDITOR_APP_URL,
+  NPM_PACKAGE_URL,
+  STORYBOOK_URL,
+} from "#constants";
 
 const links = [
   { label: "Documentation", href: DOCUMENTATION_URL },
   { label: "Storybook", href: STORYBOOK_URL },
+  { label: "Editor", href: EDITOR_APP_URL },
 ];
 
 export function SiteHeader() {
