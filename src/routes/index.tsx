@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Articles } from "#components/sections/articles";
 import { CheckList } from "#components/sections/check-list";
 import { ClosingCta } from "#components/sections/closing-cta";
+import { Compare } from "#components/sections/compare";
 import { Faq } from "#components/sections/faq";
 import { Hero } from "#components/sections/hero";
 import { QuickStart } from "#components/sections/quick-start";
@@ -19,6 +20,7 @@ function Home() {
     <>
       <Hero />
       <TrustedBy />
+      <Compare />
       <Articles />
       <QuickStart />
       <ThemeTypes />
