@@ -25,7 +25,8 @@ import { ArrowUpRightIcon, MenuIcon } from "lucide-react";
 
 const pages = [
   { label: "Enterprise", to: "/enterprise" },
-  { label: "Pricing", to: "/pricing" },
+  // Hidden while pricing is not public yet, the /pricing route still exists
+  // { label: "Pricing", to: "/pricing" },
 ] as const;
 
 const links = [

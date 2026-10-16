@@ -5,12 +5,16 @@ import { seo } from "#lib/seo";
 
 export const Route = createFileRoute("/pricing")({
   head: () => ({
-    meta: seo({
-      title: "Pricing - Keycloakify",
-      description:
-        "Keycloakify is free and open source under the MIT license. With enterprise services, the team behind it designs, customizes, updates and supports your Keycloak theme for you.",
-      path: "/pricing",
-    }),
+    meta: [
+      ...seo({
+        title: "Pricing - Keycloakify",
+        description:
+          "Keycloakify is free and open source under the MIT license. With enterprise services, the team behind it designs, customizes, updates and supports your Keycloak theme for you.",
+        path: "/pricing",
+      }),
+      // Not public yet: keep search engines from indexing it
+      { name: "robots", content: "noindex, nofollow" },
+    ],
   }),
   component: Pricing,
 });
